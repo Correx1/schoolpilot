@@ -10,8 +10,252 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-[#FAFAFA] text-gray-900 font-sans antialiased min-h-screen flex flex-col">
-    <div id="app" class="w-full"></div>
-    <script type="module" src="/src/about.js"></script>
+  <body class="bg-bg-dull text-gray-900 font-sans antialiased min-h-screen flex flex-col">
+    
+    <!-- Unified Reusable Navbar Mount Point -->
+    <div id="navbar"></div>
+
+    <main class="w-full grow">
+      
+      <!-- About Hero Section -->
+      <section class="relative pt-12 pb-16 md:pt-20 md:pb-20 overflow-hidden bg-bg-dull border-b border-gray-200">
+        
+        <!-- Clean Subtle Grid Background (Small Boxes) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none">
+          <!-- Visible Crisp Grid of Small Boxes -->
+          <svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="about-grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#64748B" stroke-width="1" stroke-opacity="0.12" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#about-grid-pattern)" />
+          </svg>
+
+          <!-- Ambient Soft Color Glows -->
+          <div class="absolute top-4 left-1/4 -translate-x-1/2 w-96 h-96 bg-primary/8 rounded-full blur-3xl"></div>
+          <div class="absolute top-12 right-1/4 translate-x-1/2 w-96 h-96 bg-secondary/8 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl lg:max-w-5xl mx-auto leading-[1.15]">
+            <span class="text-primary block">Dedicated to Transforming</span>
+            <span class="text-secondary inline-block mt-1">School Operations</span>
+          </h1>
+
+          <p class="mt-8 sm:mt-10 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto font-normal leading-relaxed">
+            At School Pilot, we are dedicated to transforming the way educational institutions manage their operations through innovative and user-friendly technology solutions.
+          </p>
+        </div>
+      </section>
+
+      <!-- Story, Vision & Mission Section -->
+      <section id="our-story" class="py-16 sm:py-24 bg-white border-b border-gray-200 w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          
+          <!-- Our Story (2-Column Grid) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full pb-16 lg:pb-20 border-b border-gray-100">
+            <div class="w-full min-w-0 border-l-2 border-gray-900 pl-6 space-y-5">
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.2]">
+                <span class="text-primary">Our</span> <span class="text-secondary">Story</span>
+              </h2>
+              <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
+                <p>
+                  School Pilot was founded with the belief that technology can significantly improve the way schools operate.
+                </p>
+                <p>
+                  We recognized the challenges faced by educational institutions in managing administrative tasks and saw an opportunity to create a solution that would make a real difference. Our team of dedicated professionals has worked tirelessly to develop a platform that meets the specific needs of Nigerian schools.
+                </p>
+              </div>
+            </div>
+
+            <div class="w-full min-w-0 flex items-center justify-center">
+              <div class="w-full max-w-lg">
+                <svg viewBox="0 0 540 400" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="270" cy="200" r="160" fill="#F1F5F9" fill-opacity="0.6"/>
+                  <circle cx="380" cy="120" r="40" fill="#EE5A31" fill-opacity="0.08"/>
+                  <circle cx="140" cy="280" r="60" fill="#1D2E9D" fill-opacity="0.05"/>
+                  <ellipse cx="270" cy="330" rx="190" ry="40" fill="#E2E8F0" fill-opacity="0.7"/>
+                  <rect x="140" y="70" width="260" height="230" rx="20" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+                  <rect x="140" y="70" width="260" height="40" rx="20" fill="#1D2E9D"/>
+                  <circle cx="165" cy="90" r="4" fill="#EE5A31"/>
+                  <circle cx="178" cy="90" r="4" fill="#FBBF24"/>
+                  <circle cx="191" cy="90" r="4" fill="#34D399"/>
+                  <rect x="220" y="85" width="120" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.3"/>
+                  <rect x="160" y="125" width="105" height="75" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+                  <path d="M175 175 L195 155 L215 165 L245 140" stroke="#EE5A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="245" cy="140" r="4" fill="#EE5A31"/>
+                  <rect x="275" y="125" width="105" height="75" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+                  <rect x="290" y="165" width="12" height="20" rx="3" fill="#1D2E9D"/>
+                  <rect x="308" y="150" width="12" height="35" rx="3" fill="#EE5A31"/>
+                  <rect x="326" y="140" width="12" height="45" rx="3" fill="#1D2E9D"/>
+                  <rect x="344" y="158" width="12" height="27" rx="3" fill="#3B82F6"/>
+                  <rect x="160" y="215" width="220" height="65" rx="10" fill="#EFF6FF" stroke="#DBEAFE" stroke-width="1.5"/>
+                  <circle cx="190" cy="247" r="16" fill="#1D2E9D"/>
+                  <path d="M185 247 L188 250 L196 242" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="215" y="235" width="90" height="10" rx="5" fill="#1D2E9D" fill-opacity="0.8"/>
+                  <rect x="215" y="252" width="140" height="7" rx="3.5" fill="#94A3B8"/>
+                  <g transform="translate(80, 140)">
+                    <circle cx="35" cy="35" r="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+                    <path d="M35 20 L53 29 L35 38 L17 29 Z" fill="#EE5A31"/>
+                    <path d="M23 33 L23 44 C23 47 35 50 35 50 C35 50 47 47 47 44 L47 33" stroke="#EE5A31" stroke-width="2.5" fill="none"/>
+                    <line x1="50" y1="29" x2="50" y2="44" stroke="#EE5A31" stroke-width="2"/>
+                  </g>
+                  <g transform="translate(410, 190)">
+                    <circle cx="35" cy="35" r="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+                    <path d="M24 24 H46 V46 H24 Z" rx="3" fill="#1D2E9D"/>
+                    <line x1="28" y1="30" x2="42" y2="30" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="28" y1="35" x2="38" y2="35" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="35" cy="41" r="2.5" fill="#EE5A31"/>
+                  </g>
+                  <path d="M120 180 C 120 180, 135 150, 155 160" stroke="#EE5A31" stroke-width="2" stroke-dasharray="4 4"/>
+                  <path d="M410 220 C 410 220, 395 240, 380 235" stroke="#1D2E9D" stroke-width="2" stroke-dasharray="4 4"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stepped Vision & Mission Layout (2-Column Step) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 w-full pt-16 pb-24 items-start">
+            
+            <!-- Step 1: Our Vision -->
+            <div class="border-l-[2.5px] border-gray-900 pl-6 space-y-4">
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                <span class="text-primary">Our</span> <span class="text-secondary">Vision</span>
+              </h3>
+              <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
+                <p>
+                  Our vision is to be the leading provider of school management solutions in Nigeria, empowering schools to operate more efficiently and effectively.
+                </p>
+                <p>
+                  We aim to bridge the gap between technology and education, creating a seamless and integrated platform that addresses the unique needs of Nigerian schools.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2: Our Mission (Stepped down) -->
+            <div class="border-l-[2.5px] border-gray-900 pl-6 md:mt-20 space-y-4">
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                <span class="text-primary">Our</span> <span class="text-secondary">Mission</span>
+              </h3>
+              <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
+                <p>
+                  Our mission is to provide an all-in-one school management mobile and web app that simplifies administrative processes, enhances communication, and supports the educational goals of schools.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Core Commitments / Pillars Section -->
+      <section id="commitments" class="w-full bg-bg-dull border-b border-gray-200 overflow-hidden py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-start gap-12 lg:gap-16">
+            
+            <div class="lg:col-span-4 space-y-4">
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.12]">
+                <span class="text-primary block">Core commitments</span>
+                <span class="text-secondary inline-block mt-1">for every school</span>
+              </h2>
+              <p class="text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
+                Providing an all-in-one platform to simplify school operations and support educational growth.
+              </p>
+            </div>
+
+            <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
+              <div>
+                <div class="text-primary mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9 text-primary"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 tracking-tight mb-2">Support</h3>
+                <p class="text-base text-gray-600 leading-relaxed font-normal">
+                  Providing exceptional customer support to help schools maximize the benefits of our platform.
+                </p>
+              </div>
+
+              <div>
+                <div class="text-primary mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9 text-primary"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 tracking-tight mb-2">Innovation</h3>
+                <p class="text-base text-gray-600 leading-relaxed font-normal">
+                  Continuously developing and improving our platform to meet the evolving needs of schools.
+                </p>
+              </div>
+
+              <div>
+                <div class="text-primary mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9 text-primary"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 tracking-tight mb-2">Accessibility</h3>
+                <p class="text-base text-gray-600 leading-relaxed font-normal">
+                  Making our platform inclusive and usable by everyone, including those with disabilities.
+                </p>
+              </div>
+
+              <div>
+                <div class="text-primary mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9 text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 tracking-tight mb-2">Quality</h3>
+                <p class="text-base text-gray-600 leading-relaxed font-normal">
+                  Ensuring our web app is reliable, secure, and easy to use.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section (3 Members) -->
+      <section id="team" class="bg-white border-b border-gray-200 w-full overflow-hidden py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-primary">
+              MEET OUR <span class="text-secondary">TEAM</span>
+            </h2>
+            <p class="mt-4 text-base sm:text-lg text-gray-600 font-normal leading-relaxed max-w-2xl mx-auto">
+              Passionate individuals with diverse backgrounds in education, technology, and business. Together, we are committed to providing the best possible solutions and support to our users.
+            </p>
+          </div>
+
+          <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div class="flex flex-col items-center group">
+              <div class="w-48 h-48 rounded-full overflow-hidden shadow-lg border-4 border-white mb-5 transition-transform duration-300 group-hover:scale-105 shrink-0">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="James Turner" class="w-full h-full object-cover object-top" loading="lazy" />
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">James Turner</h3>
+              <p class="text-sm sm:text-base text-gray-600 font-normal mt-1.5">Brand Strategy Director</p>
+            </div>
+
+            <div class="flex flex-col items-center group">
+              <div class="w-48 h-48 rounded-full overflow-hidden shadow-lg border-4 border-white mb-5 transition-transform duration-300 group-hover:scale-105 shrink-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Emily Park" class="w-full h-full object-cover object-top" loading="lazy" />
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">Emily Park</h3>
+              <p class="text-sm sm:text-base text-gray-600 font-normal mt-1.5">Digital Solutions Expert</p>
+            </div>
+
+            <div class="flex flex-col items-center group">
+              <div class="w-48 h-48 rounded-full overflow-hidden shadow-lg border-4 border-white mb-5 transition-transform duration-300 group-hover:scale-105 shrink-0">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Daniel Kim" class="w-full h-full object-cover object-top" loading="lazy" />
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">Daniel Kim</h3>
+              <p class="text-sm sm:text-base text-gray-600 font-normal mt-1.5">Creative Marketing Partner</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Unified Reusable Footer Mount Point -->
+    <div id="footer"></div>
+
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

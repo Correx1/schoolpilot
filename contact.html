@@ -10,8 +10,170 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-[#FAFAFA] text-gray-900 font-sans antialiased min-h-screen flex flex-col">
-    <div id="app" class="w-full"></div>
-    <script type="module" src="/src/contact.js"></script>
+  <body class="bg-bg-dull text-gray-900 font-sans antialiased min-h-screen flex flex-col">
+    
+    <!-- Unified Reusable Navbar Mount Point -->
+    <div id="navbar"></div>
+
+    <main class="w-full grow">
+      
+      <!-- Contact Hero Section with Background Image & Dark Overlay -->
+      <section class="relative bg-slate-900 text-white w-full overflow-hidden" style="padding-top: 6rem; padding-bottom: 7rem;">
+        <img 
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80" 
+          alt="Contact SchoolPilot" 
+          class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+        />
+        <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-[2px]"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl mx-auto leading-[1.15]">
+            <span class="text-white">Get in</span> <span class="text-secondary">Touch</span>
+          </h1>
+          <p class="mt-6 sm:mt-8 text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto font-normal leading-relaxed">
+            Have questions about SchoolPilot or need a customized solution for your school? Our team is here to help you every step of the way.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Details & Form Section (Col 4, 8) -->
+      <section class="bg-bg-dull border-b border-gray-200 w-full overflow-hidden" style="padding-top: 5rem; padding-bottom: 6.5rem;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start max-w-6xl mx-auto">
+            
+            <!-- Left Column: 4 Columns - Contact Details -->
+            <div class="lg:col-span-4 space-y-4 pt-1">
+              <div class="flex items-start gap-3.5 p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-gray-500">Email Us</h3>
+                  <a href="mailto:support@schoolpilot.ng" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors mt-0.5 block">
+                    support@schoolpilot.ng
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5 p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-gray-500">Call / WhatsApp</h3>
+                  <a href="tel:+2348000000000" class="text-sm font-semibold text-gray-700 hover:text-primary transition-colors mt-0.5 block">
+                    +234 (0) 800 SCHOOLPILOT
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5 p-4 rounded-xl bg-white border border-gray-200/90 shadow-2xs">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0 border border-blue-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xs font-bold uppercase tracking-wider text-gray-500">Office Location</h3>
+                  <p class="text-sm text-gray-700 font-medium mt-0.5 leading-relaxed">
+                    18 Oguta Road Onitsha,<br>Anambra - Nigeria.
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-3">
+                <h3 class="text-base font-bold text-gray-900 mb-3.5 tracking-tight">Connect With Us:</h3>
+                <div class="flex items-center gap-3">
+                  <a href="#" class="w-11 h-11 rounded-xl bg-white hover:bg-blue-50 text-gray-700 hover:text-primary flex items-center justify-center transition-colors shadow-2xs border border-gray-200/80" aria-label="Facebook">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  </a>
+                  <a href="#" class="w-11 h-11 rounded-xl bg-white hover:bg-blue-50 text-gray-700 hover:text-primary flex items-center justify-center transition-colors shadow-2xs border border-gray-200/80" aria-label="Twitter">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z"/></svg>
+                  </a>
+                  <a href="#" class="w-11 h-11 rounded-xl bg-white hover:bg-blue-50 text-gray-700 hover:text-primary flex items-center justify-center transition-colors shadow-2xs border border-gray-200/80" aria-label="Instagram">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  </a>
+                  <a href="#" class="w-11 h-11 rounded-xl bg-white hover:bg-blue-50 text-gray-700 hover:text-primary flex items-center justify-center transition-colors shadow-2xs border border-gray-200/80" aria-label="YouTube">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: 8 Columns - Clean Neat Contact Form -->
+            <div class="lg:col-span-8 bg-white rounded-xl p-6 sm:p-8 border border-gray-200/90 shadow-2xs">
+              <div class="mb-6">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">Send us a Message</h3>
+                <p class="text-sm text-gray-500 mt-1 font-normal">Fill in your details below and we will get back to you promptly.</p>
+              </div>
+
+              <form id="contact-form" class="space-y-4" onsubmit="event.preventDefault();">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="fullName" class="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wide">
+                      Full Name <span class="text-secondary">*</span>
+                    </label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="e.g. Adebayo Johnson" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm" />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wide">
+                      Email Address <span class="text-secondary">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required placeholder="e.g. adebayo@example.com" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wide">
+                    Subject <span class="text-secondary">*</span>
+                  </label>
+                  <input type="text" id="subject" name="subject" required placeholder="e.g. Inquiry about SchoolPilot onboarding" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm" />
+                </div>
+
+                <div>
+                  <label for="message" class="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wide">
+                    Message <span class="text-secondary">*</span>
+                  </label>
+                  <textarea id="message" name="message" rows="4" required placeholder="Tell us how we can assist you..." class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm resize-y"></textarea>
+                </div>
+
+                <div class="pt-1">
+                  <button type="submit" class="btn btn-primary btn-md w-full sm:w-auto px-6 py-3 font-semibold text-sm shadow-sm group cursor-pointer inline-flex items-center justify-center gap-2">
+                    <span>Send Message</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Office Map Section -->
+      <section class="w-full bg-white border-b border-gray-200 overflow-hidden" style="padding-top: 4rem; padding-bottom: 5rem;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="max-w-6xl mx-auto">
+            <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">Our Location</h3>
+                <p class="text-sm text-gray-500 mt-0.5">18 Oguta Road Onitsha, Anambra - Nigeria.</p>
+              </div>
+              <a href="https://maps.google.com?q=18+Oguta+Road+Onitsha+Anambra+Nigeria" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-secondary transition-colors">
+                <span>Open in Google Maps</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+            <div class="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-gray-200 shadow-2xs">
+              <iframe title="SchoolPilot Location Map" src="https://maps.google.com/maps?q=18%20Oguta%20Road,%20Onitsha,%20Anambra,%20Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Unified Reusable Footer Mount Point -->
+    <div id="footer"></div>
+
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

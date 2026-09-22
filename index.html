@@ -10,8 +10,321 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-[#FAFAFA] text-gray-900 font-sans antialiased min-h-screen flex flex-col">
-    <div id="app" class="w-full"></div>
+  <body class="bg-bg-dull text-gray-900 font-sans antialiased min-h-screen flex flex-col">
+    
+    <!-- Unified Reusable Navbar Mount Point -->
+    <div id="navbar"></div>
+
+    <main id="main-content" class="w-full grow">
+      
+      <!-- 1. Hero Section -->
+      <section id="product" class="relative pt-10 pb-12 md:pt-16 md:pb-16 overflow-hidden bg-bg-dull">
+        
+        <!-- Clean Subtle Grid Background (Small Boxes) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none">
+          <!-- Visible Crisp Grid of Small Boxes -->
+          <svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="hero-grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#64748B" stroke-width="1" stroke-opacity="0.12" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#hero-grid-pattern)" />
+          </svg>
+
+          <!-- Ambient Soft Color Glows -->
+          <div class="absolute top-4 left-1/4 -translate-x-1/2 w-96 h-96 bg-primary/8 rounded-full blur-3xl"></div>
+          <div class="absolute top-12 right-1/4 translate-x-1/2 w-96 h-96 bg-secondary/8 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-3xl lg:max-w-4xl mx-auto leading-[1.15]">
+            <span class="text-primary block">Modern Systems for</span>
+            <span class="text-secondary inline-block mt-1">Smarter Schools</span>
+          </h1>
+
+          <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto font-normal leading-relaxed">
+            From admissions and attendance to automated grading and fee payments — empower administrators, teachers, and parents with an intuitive all-in-one platform.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto sm:max-w-none">
+            <a href="#get-started" class="btn btn-primary btn-lg w-full sm:w-auto shadow-lg hover:shadow-xl group">
+              <span>Get Started</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+
+            <a href="#demo" class="btn btn-outline-secondary btn-lg w-full sm:w-auto bg-white hover:bg-secondary hover:text-white shadow-xs group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary group-hover:text-white transition-colors"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              <span>Request Demo</span>
+            </a>
+          </div>
+
+          <!-- Product Preview Window Stage (Clean Straight Layout) -->
+          <div class="mt-12 sm:mt-16 relative mx-auto max-w-5xl">
+            <!-- Single Clean Mockup Card with Video Inside -->
+            <div class="relative rounded-2xl sm:rounded-3xl p-2.5 sm:p-3.5 bg-white border border-gray-200/90 shadow-2xl">
+              <!-- High-Resolution Video Viewport -->
+              <div class="rounded-xl sm:rounded-2xl overflow-hidden bg-black border border-gray-200 shadow-inner">
+                <div class="relative w-full h-80 sm:h-110 md:h-130 bg-gray-900 flex items-center justify-center overflow-hidden">
+                  <video 
+                    id="hero-video"
+                    class="w-full h-full object-cover pointer-events-none select-none" 
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline 
+                    preload="metadata"
+                    poster="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1600&q=80"
+                  >
+                    <source src="/src/assets/schoolpilot.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 2. Logo Carousel Section -->
+      <section id="customer" class="w-full py-4 sm:py-5 bg-white border-y border-gray-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-2">
+          <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-gray-500">
+            Trusted by leading educational institutions
+          </p>
+        </div>
+        <div class="w-full max-w-7xl mx-auto md:px-8 lg:px-12 overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div id="logo-track" class="flex w-max items-center"></div>
+        </div>
+      </section>
+
+      <!-- 3. Features Grid Section -->
+      <section id="features" class="py-16 sm:py-24 bg-bg-dull border-b border-gray-200 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <div class="lg:col-span-5 text-left">
+              <span class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-secondary block mb-3">
+                Integrated Architecture
+              </span>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.2]">
+                <span class="text-primary">There's a smarter way to run</span> <span class="text-secondary">modern schools</span>
+              </h2>
+              <p class="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed font-normal">
+                SchoolPilot gives your administration 16+ enterprise modules in a single seamless platform. Automate attendance, exams, grading, payments, and communications with speed and precision.
+              </p>
+            </div>
+            <div class="lg:col-span-7 flex flex-col items-center lg:items-end w-full">
+              <div id="feature-category-bar" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full bg-[#0B1130] shadow-xl border border-[#162052] mb-8 sm:mb-10"></div>
+              <div id="feature-cloud" class="flex flex-wrap justify-center lg:justify-end gap-2.5 sm:gap-3 max-w-2xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Feature Showcase Cards -->
+      <section class="bg-bg-dull border-b border-gray-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto border-x border-gray-200/80">
+          <div id="feature-showcase-grid" class="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 divide-gray-200"></div>
+        </div>
+      </section>
+
+      <!-- 5. Stats Infrastructure Section -->
+      <section id="infrastructure" class="py-16 sm:py-20 bg-bg-dull border-b border-gray-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.2]">
+              <span class="text-primary">Backed by</span> <span class="text-secondary">proven infrastructure</span>
+            </h2>
+            <p class="mt-3 text-sm sm:text-base text-gray-600 font-normal leading-relaxed">
+              SchoolPilot provides the reliable digital backbone for educational communities nationwide.
+            </p>
+          </div>
+          <div id="stats-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 divide-x-0 sm:divide-x divide-gray-200/60"></div>
+        </div>
+      </section>
+
+      <!-- 6. Interface Spotlight Section -->
+      <section id="company" class="py-16 sm:py-24 bg-bg-dull border-b border-gray-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="max-w-3xl mb-12 sm:mb-14">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+              <span class="text-primary">Building Smarter Schools with</span> <span class="text-secondary">SchoolPilot</span>
+            </h2>
+            <p class="mt-4 text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
+              See how modern institutions use SchoolPilot to eliminate paperwork, automate student grading, and deliver a delightful experience to teachers and parents.
+            </p>
+          </div>
+          <div class="flex items-center gap-6 sm:gap-10 border-b border-gray-200 mb-10 overflow-x-auto no-scrollbar">
+            <div class="pb-3 text-sm sm:text-base font-bold text-primary border-b-2 border-primary cursor-default whitespace-nowrap">
+              Awesome Interface
+            </div>
+            <div class="pb-3 text-sm sm:text-base font-medium text-gray-400 select-none cursor-default whitespace-nowrap">
+              30-Days Free Trial
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight leading-snug mb-3">
+                  Unique & clean user interface on all screens.
+                </h3>
+                <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                  No special software installation needed. Adaptable on different screens and works out of the box from day one.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-gray-100">
+                <h4 class="text-base sm:text-lg font-bold text-secondary mb-2">
+                  Start your 30-days free trial
+                </h4>
+                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
+                  We are convinced that you will love SchoolPilot. That is why we are offering you a 30-day free trial to see how SchoolPilot will revolutionize your school.
+                </p>
+              </div>
+              <div class="grid grid-cols-2 gap-4 pt-2">
+                <div>
+                  <div class="text-2xl sm:text-3xl font-extrabold text-gray-900">100%</div>
+                  <p class="text-xs text-gray-500 mt-0.5">Responsive UI, Works in all devices</p>
+                </div>
+                <div>
+                  <div class="text-2xl sm:text-3xl font-extrabold text-primary">30 Days</div>
+                  <p class="text-xs text-gray-500 mt-0.5">Free Trial</p>
+                </div>
+              </div>
+              <div class="pt-2">
+                <a href="#get-started" class="btn btn-primary btn-md">
+                  Start 30-Day Free Trial
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div class="relative w-full pt-2 pb-6 sm:pb-8 pr-3 sm:pr-8">
+                <!-- PC Mockup -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200/90 bg-white aspect-4/3 sm:aspect-16/11 w-full">
+                  <img 
+                    src="/src/assets/schopc.png" 
+                    alt="SchoolPilot Desktop Dashboard Preview" 
+                    class="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- Overlapping Phone Mockup -->
+                <div class="absolute -bottom-2 right-0 sm:-bottom-4 sm:right-2 w-32 sm:w-44 md:w-52 lg:w-48 xl:w-56 z-10 drop-shadow-2xl">
+                  <img 
+                    src="/src/assets/schoolpilot%20phone.png" 
+                    alt="SchoolPilot Mobile Interface Preview" 
+                    class="w-full h-auto object-contain drop-shadow-2xl"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Pricing & Modules CTA -->
+      <section id="pricing" class="py-12 sm:py-16 bg-bg-dull border-b border-gray-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="space-y-3">
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.2]">
+                <span class="text-primary">All types of modules &</span> <span class="text-secondary">integrations</span>
+              </h2>
+              <p class="text-sm sm:text-base text-gray-600 font-normal leading-relaxed max-w-2xl mx-auto">
+                Everything your institution needs to automate academics, billing, security, and school communication — all under one unified platform.
+              </p>
+            </div>
+            <div id="cta-modules-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2"></div>
+            <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+              <a href="/contact.html" class="btn btn-primary btn-md gap-2 font-semibold shadow-md px-8 py-3.5 text-sm sm:text-base group w-full sm:w-auto">
+                <span>Contact Us for Pricing</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-gray-500 font-medium pt-2">
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Quick School Onboarding
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                24/7 Dedicated Support
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                99.9% Uptime Guarantee
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Testimonials Section -->
+      <section id="testimonials" class="py-16 sm:py-24 bg-bg-dull border-b border-gray-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="text-center max-w-4xl mx-auto mb-14 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+              <span class="text-primary">School Pilot have over 100+ users,</span> <span class="text-secondary">what they have to say about us.</span>
+            </h2>
+            <p class="mt-4 text-base sm:text-lg text-gray-600 font-normal leading-relaxed max-w-2xl mx-auto">
+              See what principals, administrators, and teachers have to say about running on SchoolPilot.
+            </p>
+          </div>
+          <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start"></div>
+        </div>
+      </section>
+
+      <!-- 9. FAQ Section -->
+      <section id="faq" class="py-16 sm:py-24 bg-bg-dull border-b border-gray-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+            <div class="lg:col-span-4 space-y-6">
+              <div class="space-y-3">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.2]">
+                  <span class="text-primary">Frequently Asked</span> <br class="hidden sm:inline" /><span class="text-secondary">Questions</span>
+                </h2>
+                <p class="text-sm sm:text-base text-gray-600 font-normal leading-relaxed">
+                  Find clear answers to common questions about SchoolPilot features, pricing, setup, and affiliate programs.
+                </p>
+              </div>
+              <div class="hidden lg:block bg-white border border-gray-200/90 rounded-2xl p-6 shadow-xs space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-gray-900">Still have questions?</h4>
+                  <p class="text-xs sm:text-sm text-gray-500 mt-1">Our friendly education consultants are available 24/7 to help you.</p>
+                </div>
+                <a href="/contact.html" class="btn btn-primary btn-sm w-full font-semibold justify-center py-2.5">
+                  <span>Contact Our Team</span>
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-8 space-y-6">
+              <div id="faq-accordion-list" class="bg-white rounded-2xl px-6 sm:px-8 py-2 shadow-xs divide-y divide-gray-200 border border-gray-200"></div>
+              <div class="block lg:hidden bg-white border border-gray-200/90 rounded-2xl p-6 shadow-xs space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-gray-900">Still have questions?</h4>
+                  <p class="text-xs sm:text-sm text-gray-500 mt-1">Our friendly education consultants are available 24/7 to help you.</p>
+                </div>
+                <a href="/contact.html" class="btn btn-primary btn-sm w-full font-semibold justify-center py-2.5">
+                  <span>Contact Our Team</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Unified Reusable Footer Mount Point -->
+    <div id="footer"></div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
