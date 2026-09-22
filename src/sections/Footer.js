@@ -1,4 +1,5 @@
 import logoImg from '../assets/schoolpilot-logo.png';
+import faviconImg from '../assets/schoolpilot favicon.png';
 
 export function renderFooter() {
   return `
@@ -53,12 +54,9 @@ export function renderFooter() {
           </div>
 
           <!-- Elevated Squircle Brand Icon Badge -->
-          <div class="relative z-10 p-2 sm:p-2.5 rounded-3xl bg-white/90 backdrop-blur-md border border-gray-200/90 shadow-xl transition-transform hover:scale-105 duration-300">
-            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#0B1130] flex items-center justify-center shadow-inner">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-              </svg>
+          <div class="relative z-10 p-2.5 sm:p-3 rounded-3xl sm:rounded-[2rem] bg-white/95 backdrop-blur-md border border-gray-200/90 shadow-xl transition-transform hover:scale-105 duration-300">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl sm:rounded-3xl bg-white flex items-center justify-center p-3 sm:p-3.5 shadow-inner border border-gray-100">
+              <img src="${faviconImg}" alt="SchoolPilot Favicon" class="w-full h-full object-contain" />
             </div>
           </div>
 
