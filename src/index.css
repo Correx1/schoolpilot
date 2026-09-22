@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-primary: #1D2E9D;
+  --color-primary-hover: #16247c;
+  --color-secondary: #EE5A31;
+  --color-secondary-hover: #d94820;
+  --color-bg-dull: #fafafa;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-sm {
+    @apply text-sm px-4 py-1.5 gap-1.5;
+  }
+
+  .btn-md {
+    @apply text-base px-5 py-2.5 gap-2;
+  }
+
+  .btn-lg {
+    @apply text-lg px-7 py-3 gap-2.5;
+  }
+
+  .btn-primary {
+    @apply bg-[#1D2E9D] text-white hover:bg-[#16247c] focus:ring-[#1D2E9D] shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-[#EE5A31] text-white hover:bg-[#d94820] focus:ring-[#EE5A31] shadow-sm;
+  }
+
+  .btn-outline {
+    @apply border-2 border-[#1D2E9D] text-[#1D2E9D] hover:bg-[#1D2E9D] hover:text-white focus:ring-[#1D2E9D];
+  }
+
+  .btn-outline-secondary {
+    @apply border-2 border-[#EE5A31] text-[#EE5A31] hover:bg-[#EE5A31] hover:text-white focus:ring-[#EE5A31];
+  }
+
+  .btn-ghost {
+    @apply text-[#1D2E9D] hover:bg-[#1D2E9D]/10 focus:ring-[#1D2E9D];
+  }
+
+  .btn-white {
+    @apply bg-white text-[#1D2E9D] hover:bg-gray-50 shadow-sm focus:ring-white;
+  }
+}

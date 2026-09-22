@@ -1,0 +1,127 @@
+import './index.css';
+import { renderNavbar, initNavbar } from './sections/Navbar.js';
+import { renderFooter, initFooter } from './sections/Footer.js';
+
+function renderDisclaimerContent() {
+  return `
+    <main class="w-full">
+      
+      <!-- Disclaimer Header -->
+      <section class="relative bg-white border-b border-gray-200 w-full overflow-hidden" style="padding-top: 4.5rem; padding-bottom: 4.5rem;">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          <div class="max-w-3xl">
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900">
+              <span class="text-[#1D2E9D]">Dis</span><span class="text-[#EE5A31]">claimer</span>
+            </h1>
+            <p class="mt-4 text-sm sm:text-base text-gray-500 font-medium flex items-center gap-2">
+              <span>January 1, 2021</span>
+              <span>•</span>
+              <span>by <a href="https://schoolpilot.online/disclaimer.html#" class="text-[#1D2E9D] hover:underline font-semibold">Paragon MicroData Ltd</a></span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Disclaimer Body -->
+      <section class="bg-[#FAFAFA] border-b border-gray-200 w-full overflow-hidden" style="padding-top: 4rem; padding-bottom: 6.5rem;">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80">
+          
+          <div class="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 border border-gray-200/90 shadow-2xs space-y-10 text-gray-700 leading-relaxed font-normal text-base">
+            
+            <!-- Section 1 -->
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight flex items-center gap-2.5">
+                <span class="text-[#1D2E9D]">1.</span> General Information
+              </h2>
+              <p class="text-gray-600 leading-relaxed">
+                The information provided by School Pilot on [<a href="http://schoolpilot.online/" class="text-[#1D2E9D] hover:underline font-medium">schoolpilot.online</a>] is for general informational purposes only. All information on the site is provided in good faith; however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
+              </p>
+            </div>
+
+            <hr class="border-gray-100" />
+
+            <!-- Section 2 -->
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight flex items-center gap-2.5">
+                <span class="text-[#1D2E9D]">2.</span> External Links Disclaimer
+              </h2>
+              <div class="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  The School Pilot web app may contain (or you may be sent through the site) links to other websites or content belonging to or originating from third parties or links to websites and features in banners or other advertising. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us.
+                </p>
+                <p>
+                  We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through the site or any website or feature linked in any banner or other advertising. We will not be a party to or in any way be responsible for monitoring any transaction between you and third-party providers of products or services.
+                </p>
+              </div>
+            </div>
+
+            <hr class="border-gray-100" />
+
+            <!-- Section 3 -->
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight flex items-center gap-2.5">
+                <span class="text-[#1D2E9D]">3.</span> Professional Disclaimer
+              </h2>
+              <div class="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  The School Pilot web app does not contain any professional advice. The information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals. We do not provide any kind of professional advice.
+                </p>
+                <p>
+                  The use or reliance of any information contained on this site is solely at your own risk.
+                </p>
+              </div>
+            </div>
+
+            <hr class="border-gray-100" />
+
+            <!-- Section 4 -->
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight flex items-center gap-2.5">
+                <span class="text-[#1D2E9D]">4.</span> Limitation of Liability
+              </h2>
+              <p class="mb-4 text-gray-600">
+                In no event shall School Pilot, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:
+              </p>
+              <ul class="space-y-2.5 pl-5 list-disc text-gray-600">
+                <li>Your access to or use of or inability to access or use the service.</li>
+                <li>Any conduct or content of any third party on the service.</li>
+                <li>Any content obtained from the service.</li>
+                <li>Unauthorized access, use, or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence), or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</li>
+              </ul>
+            </div>
+
+            <hr class="border-gray-100" />
+
+            <!-- Section 5 -->
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4 tracking-tight flex items-center gap-2.5">
+                <span class="text-[#1D2E9D]">5.</span> "As Is" and "As Available" Disclaimer
+              </h2>
+              <p class="text-gray-600 leading-relaxed">
+                The School Pilot web app is provided on an "AS IS" and "AS AVAILABLE" basis. School Pilot makes no representations or warranties of any kind, express or implied, as to the operation of their services or the information, content, or materials included therein. You expressly agree that your use of the web app and its services is at your sole risk.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  `;
+}
+
+const app = document.getElementById('app');
+
+function renderApp() {
+  app.innerHTML = `
+    ${renderNavbar()}
+    ${renderDisclaimerContent()}
+    ${renderFooter()}
+  `;
+
+  initNavbar();
+  initFooter();
+}
+
+renderApp();
