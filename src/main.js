@@ -174,11 +174,17 @@ export const statsData = [
 
 // CTA Modules
 export const ctaModules = [
-  { name: 'CBT Exam Engine', category: 'Examinations', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>` },
-  { name: 'Smart NFC Attendance', category: 'Hardware', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>` },
-  { name: 'Multi-Template Reports', category: 'Academics', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>` },
+  { name: 'AI Exam Engine & CBT', category: 'Academics', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>` },
+  { name: 'Biometric & NFC Attendance', category: 'Hardware', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>` },
+  { name: 'Multi Report Card Templates', category: 'Academics', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>` },
   { name: 'Student Digital Wallet', category: 'Finance', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>` },
+  { name: 'Online Fee Gateway & POS', category: 'Finance', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>` },
+  { name: 'Instant SMS & Email Alerts', category: 'Messaging', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>` },
   { name: 'Staff & Parent Portals', category: 'Community', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>` },
+  { name: 'Real-time GPS Bus Tracking', category: 'Transport', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>` },
+  { name: 'Live Master Broadsheets', category: 'Grading', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>` },
+  { name: 'Timetable & Class Schedule', category: 'Academics', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>` },
+  { name: 'Cashless Canteen System', category: 'Finance', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" x2="21" y1="6" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>` },
   { name: 'Multi-Campus Central Hub', category: 'Administration', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>` }
 ];
 
@@ -312,21 +318,21 @@ function populateDynamicElements() {
   if (showcaseGrid) {
     showcaseGrid.innerHTML = featureCards
       .map((card, idx) => `
-        <div class="flex flex-col justify-between p-8 sm:p-10 lg:p-12 bg-white hover:bg-gray-50/20 transition-colors duration-200 ${
+        <div class="flex flex-col justify-between p-5 sm:p-8 lg:p-12 bg-white hover:bg-gray-50/20 transition-colors duration-200 ${
           idx % 2 === 0 ? 'lg:border-r border-gray-200' : ''
         } ${idx < featureCards.length - 2 ? 'border-b border-gray-200' : (idx === featureCards.length - 2 ? 'border-b lg:border-b-0 border-gray-200' : '')}">
           <div>
-            <div class="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-medium text-gray-500 mb-3">
+            <div class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-gray-500 mb-3">
               <span class="text-gray-400">${card.categoryIcon}</span>
               <span>${card.category}</span>
             </div>
             <h3 class="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight leading-snug mb-3">
               ${card.title}
             </h3>
-            <p class="text-xs sm:text-[13px] text-gray-600 leading-relaxed font-normal mb-4 max-w-lg">
+            <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-normal mb-4 max-w-lg">
               ${card.description}
             </p>
-            <a href="${card.linkHref}" class="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-gray-900 hover:text-primary transition-colors mb-6">
+            <a href="${card.linkHref}" class="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-gray-900 hover:text-primary transition-colors mb-6">
               <span>${card.linkText}</span>
               <span class="text-gray-400 font-bold">›</span>
             </a>
@@ -559,6 +565,177 @@ function initFAQ() {
   });
 }
 
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const timestampInput = document.getElementById('_form_load_timestamp');
+  if (timestampInput) {
+    timestampInput.value = Date.now().toString();
+  }
+
+  const feedback = document.getElementById('form-feedback');
+  const submitBtn = document.getElementById('contact-submit-btn');
+  const btnText = document.getElementById('btn-text');
+  const btnIcon = document.getElementById('btn-icon');
+
+  function showFeedback(type, message) {
+    if (!feedback) return;
+    feedback.classList.remove('hidden', 'bg-red-50', 'text-red-800', 'border-red-200', 'bg-emerald-50', 'text-emerald-800', 'border-emerald-200');
+    if (type === 'error') {
+      feedback.className = 'mb-5 rounded-xl p-4 text-sm font-medium border bg-red-50 text-red-800 border-red-200 flex items-start gap-3';
+      feedback.innerHTML = `
+        <svg class="w-5 h-5 text-red-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>${message}</div>
+      `;
+    } else {
+      feedback.className = 'mb-5 rounded-xl p-4 text-sm font-medium border bg-emerald-50 text-emerald-800 border-emerald-200 flex items-start gap-3';
+      feedback.innerHTML = `
+        <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div>${message}</div>
+      `;
+    }
+    feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // 1. Anti-Bot Honeypot check
+    const honeypot = document.getElementById('_hp_website');
+    if (honeypot && honeypot.value.trim() !== '') {
+      // Bot trapped: silently simulate success without actual submission
+      showFeedback('success', 'Thank you! Your message has been sent successfully. We will get back to you shortly.');
+      form.reset();
+      return;
+    }
+
+    // 2. Anti-Bot Submission speed check (must take at least 3 seconds)
+    const loadTime = parseInt(timestampInput?.value || '0', 10);
+    const timeSpent = (Date.now() - loadTime) / 1000;
+    if (loadTime && timeSpent < 2.5) {
+      showFeedback('error', 'Form submitted too quickly. Please take a moment to review your details and submit again.');
+      return;
+    }
+
+    // 3. Rate limiting check (max 3 submissions in 5 minutes via sessionStorage)
+    const recentSubmissions = JSON.parse(sessionStorage.getItem('sp_submissions') || '[]');
+    const now = Date.now();
+    const fiveMinutesAgo = now - 5 * 60 * 1000;
+    const validRecent = recentSubmissions.filter((t) => t > fiveMinutesAgo);
+
+    if (validRecent.length >= 3) {
+      showFeedback('error', 'Too many messages sent. Please wait a few minutes before trying again or reach us directly via WhatsApp / phone.');
+      return;
+    }
+
+    // 4. Form Field Validations
+    const fullName = form.fullName.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone?.value.trim() || '';
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+
+    if (fullName.length < 2) {
+      showFeedback('error', 'Please provide your valid full name (at least 2 characters).');
+      form.fullName.focus();
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showFeedback('error', 'Please enter a valid email address (e.g. name@school.edu.ng).');
+      form.email.focus();
+      return;
+    }
+
+    if (phone && !/^[+0-9\s\-()]{7,20}$/.test(phone)) {
+      showFeedback('error', 'Please enter a valid phone number or leave it blank.');
+      form.phone.focus();
+      return;
+    }
+
+    if (subject.length < 3) {
+      showFeedback('error', 'Please enter a valid subject for your inquiry.');
+      form.subject.focus();
+      return;
+    }
+
+    if (message.length < 10) {
+      showFeedback('error', 'Please enter a descriptive message (at least 10 characters) so we can best assist you.');
+      form.message.focus();
+      return;
+    }
+
+    // 5. Submit state with loading indicator
+    const originalBtnText = btnText ? btnText.textContent : 'Send Message';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Sending Message...';
+      if (btnIcon) {
+        btnIcon.outerHTML = `<svg id="btn-icon" class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>`;
+      }
+    }
+
+    // 6. Send to Backend API Route (/api/contact) connected with Resend
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        fullName,
+        email,
+        phone,
+        subject,
+        message,
+        _hp_website: honeypot?.value || ''
+      })
+    })
+      .then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          throw new Error(data.error || 'Failed to deliver message. Please try again later.');
+        }
+        return data;
+      })
+      .then(() => {
+        // Record submission timestamp for rate limiting
+        validRecent.push(now);
+        sessionStorage.setItem('sp_submissions', JSON.stringify(validRecent));
+
+        showFeedback('success', '🎉 Thank you! Your message has been received. Our team will contact you via email or phone within 24 hours.');
+        form.reset();
+
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `
+            <span id="btn-text">Message Sent!</span>
+            <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          `;
+          setTimeout(() => {
+            submitBtn.innerHTML = `
+              <span id="btn-text">${originalBtnText}</span>
+              <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            `;
+          }, 4000);
+        }
+      })
+      .catch((err) => {
+        console.error('Submission error:', err);
+        showFeedback('error', err.message || 'Unable to send your message right now. Please reach us directly at info@schoolpilot.online or WhatsApp (+234) 903322 1927.');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `
+            <span id="btn-text">Retry Sending</span>
+            <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          `;
+        }
+      });
+  });
+}
+
 /* ==========================================================================
    4. MOUNT COMMON LAYOUT & APP INITIALIZATION
    ========================================================================== */
@@ -587,6 +764,7 @@ function initApp() {
   initLogoCarousel();
   initFeaturesGrid();
   initFAQ();
+  initContactForm();
 
   // Render Footer
   const footerContainer = document.getElementById('footer');

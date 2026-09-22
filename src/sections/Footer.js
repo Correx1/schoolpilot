@@ -67,13 +67,6 @@ export function renderFooter() {
           <div>
             &copy; ${new Date().getFullYear()} SchoolPilot Technologies. All rights reserved.
           </div>
-
-          <div class="flex items-center gap-6">
-            <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              99.9% Cloud Uptime Guaranteed
-            </span>
-          </div>
         </div>
 
       </div>

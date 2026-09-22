@@ -8,7 +8,7 @@ export function renderNavbar(activePage = 'home') {
   const getHref = (hash) => isHome ? hash : `/${hash}`;
 
   return `
-    <header id="main-header" class="fixed top-0 left-0 right-0 w-full z-50 bg-white transition-all duration-300 border-b border-gray-100">
+    <header id="main-header" class="fixed top-0 left-0 right-0 w-full z-50 bg-transparent border-b border-transparent transition-all duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-24">
           
@@ -106,8 +106,6 @@ export function renderNavbar(activePage = 'home') {
         </div>
       </div>
     </header>
-    <!-- Spacer so fixed header doesn't obscure top content -->
-    <div class="h-24 w-full shrink-0" aria-hidden="true"></div>
   `;
 }
 
@@ -116,12 +114,14 @@ export function initNavbar() {
   const navLinks = document.querySelectorAll('.nav-link');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-  // Scroll shadow effect on fixed header
+  // Scroll transparency and shadow effect on fixed header
   function updateScroll() {
-    if (window.scrollY > 10) {
-      header?.classList.add('shadow-md');
+    if (window.scrollY > 15) {
+      header?.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-xs', 'border-gray-100');
+      header?.classList.remove('bg-transparent', 'border-transparent');
     } else {
-      header?.classList.remove('shadow-md');
+      header?.classList.add('bg-transparent', 'border-transparent');
+      header?.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-xs', 'border-gray-100');
     }
   }
   window.addEventListener('scroll', updateScroll);
