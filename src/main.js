@@ -1,4 +1,6 @@
 import './index.css';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 import { renderNavbar, initNavbar } from './sections/Navbar.js';
 import { renderFooter, initFooter } from './sections/Footer.js';
 
@@ -57,7 +59,7 @@ export const featureCategories = [
   },
   {
     id: 'hardware',
-    name: 'Biometrics & NFC',
+    name: 'Biometrics & Smart Card',
     iconSvg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 11c0 3.517-1.009 6.799-2.753 9.571m3.44-2.049A9.97 9.97 0 0 0 14 11a6 6 0 0 0-6-6 6 6 0 0 0-6 6c0 1.636.393 3.18 1.09 4.542"/><path d="M16 11a8 8 0 0 0-8-8 8 8 0 0 0-8 8c0 1.93.684 3.702 1.83 5.093"/><path d="M8 11a4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4 4 4 0 0 0-4 4Z"/></svg>`
   },
   {
@@ -82,7 +84,7 @@ export const allFeaturePills = [
   { name: 'AI EXAM QUESTIONS MAKER', category: 'ai_exams' },
   { name: 'ONLINE CBT EXAMS', category: 'ai_exams' },
   { name: 'FINGERPRINT ATTENDANCE', category: 'hardware' },
-  { name: 'NFC STUDENT CARD', category: 'hardware' },
+  { name: 'SMART CARD', category: 'hardware' },
   { name: 'STUDENT WALLET', category: 'hardware' },
   { name: 'AUTOMATED REPORT CARDS', category: 'academics' },
   { name: 'LIVE MASTER BROADSHEETS', category: 'academics' },
@@ -107,7 +109,7 @@ export const featureCards = [
     categoryIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`,
     category: 'Instant Assessments',
     title: 'Online CBT & AI Question Bank',
-    description: 'Empower teachers with AI-assisted question generation, live student exam countdowns, auto-grading for MCQs, and instant result calculation.',
+    description: 'Empower teachers with AI assisted question generation, live student exam countdowns, auto grading for MCQs, and instant result calculation.',
     linkText: 'Explore CBT Engine',
     linkHref: '#cbt',
     imageSrc: cbtImg
@@ -116,8 +118,8 @@ export const featureCards = [
     id: 'nfc',
     categoryIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>`,
     category: 'Smart Hardware',
-    title: 'NFC Cards & Biometric Attendance',
-    description: 'Hardware-level integration for USB/Bluetooth RFID tap cards and fingerprint scanners at gates, hostels, classrooms, and bus transit.',
+    title: 'Smart Cards & Biometric Attendance',
+    description: 'Hardware level integration for smart cards and fingerprint scanners at gates, hostels, classrooms, and bus transit.',
     linkText: 'Explore Attendance',
     linkHref: '#attendance',
     imageSrc: nfcImg
@@ -137,7 +139,7 @@ export const featureCards = [
     categoryIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>`,
     category: 'Pixel-Perfect Output',
     title: 'Result engine and report card template',
-    description: 'Corporate, Elegant, Chart, Modern, and Classic A4 report cards calibrated for single-page printing with dynamic QR verification.',
+    description: 'Corporate, Elegant, Chart, Modern, and Classic A4 report cards calibrated for single page printing with dynamic QR verification.',
     linkText: 'Explore Report Cards',
     linkHref: '#reports',
     imageSrc: resultImg
@@ -157,7 +159,7 @@ export const featureCards = [
     categoryIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4"/><circle cx="12" cy="12" r="3"/></svg>`,
     category: 'Proactive Intelligence',
     title: 'AI At-Risk & Performance Insights',
-    description: 'Smart AI engines scan cross-term grades and attendance anomalies to proactively flag struggling students before final exams.',
+    description: 'Smart AI engines scan cross term grades and attendance anomalies to proactively flag struggling students before final exams.',
     linkText: 'Explore AI Analytics',
     linkHref: '#analytics',
     imageSrc: aiImg
@@ -175,7 +177,7 @@ export const statsData = [
 // CTA Modules
 export const ctaModules = [
   { name: 'AI Exam Engine & CBT', category: 'Academics', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>` },
-  { name: 'Biometric & NFC Attendance', category: 'Hardware', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>` },
+  { name: 'Biometric & Smart Card Attendance', category: 'Hardware', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>` },
   { name: 'Multi Report Card Templates', category: 'Academics', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>` },
   { name: 'Student Digital Wallet', category: 'Finance', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>` },
   { name: 'Online Fee Gateway & POS', category: 'Finance', icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-700"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>` },
@@ -253,7 +255,7 @@ export const faqData = [
   { question: 'What plans and pricing options are available for schools?', answer: 'SchoolPilot offers flexible, scalable plans tailored to your school size, student population, and module requirements. We provide termly and annual subscriptions designed to fit your budget. Contact us for a personalized pricing quote.' },
   { question: 'Are there any hidden onboarding or migration fees?', answer: 'No hidden fees. All plans come with free student record migration, full portal configuration, staff training sessions, and continuous 24/7 technical support.' },
   { question: 'Is School Pilot suitable for all types of educational institutions?', answer: 'Absolutely! School Pilot is versatile and can be configured to meet the specific needs of various educational settings, including primary and secondary schools, colleges, and specialty institutions.' },
-  { question: 'Can School Pilot be accessed on mobile devices?', answer: 'Yes, School Pilot is mobile-friendly and can be accessed on various devices, enabling administrators, teachers, and students to stay connected and informed no matter where they are.' },
+  { question: 'Can School Pilot be accessed on mobile devices?', answer: 'Yes, School Pilot is mobile friendly and can be accessed on various devices, enabling administrators, teachers, and students to stay connected and informed no matter where they are.' },
   { question: 'How secure is the data in School Pilot?', answer: 'Data security is a top priority for us. School Pilot uses encrypted data storage, conducts regular security audits, and implements strict access controls to ensure all data remains protected.' },
   { question: 'Who can join the School Pilot Affiliates Program?', answer: 'Anyone with a website, blog, social media presence, or network that reaches schools and educators in Nigeria can join our program.' },
   { question: 'When do affiliate commissions get paid?', answer: 'Commissions are paid out on a monthly basis, provided you have reached the minimum payout threshold.' }
@@ -314,11 +316,12 @@ function populateDynamicElements() {
   }
 
   // 3. Feature Showcase Cards
+  const showcaseAnimations = ['fade-up', 'zoom-in-up', 'flip-up', 'slide-up', 'zoom-in', 'fade-down'];
   const showcaseGrid = document.getElementById('feature-showcase-grid');
   if (showcaseGrid) {
     showcaseGrid.innerHTML = featureCards
       .map((card, idx) => `
-        <div class="flex flex-col justify-between p-5 sm:p-8 lg:p-12 bg-white hover:bg-gray-50/20 transition-colors duration-200 ${
+        <div data-aos="${showcaseAnimations[idx % showcaseAnimations.length]}" data-aos-duration="750" class="flex flex-col justify-between p-5 sm:p-8 lg:p-12 bg-white hover:bg-gray-50/20 transition-colors duration-200 ${
           idx % 2 === 0 ? 'lg:border-r border-gray-200' : ''
         } ${idx < featureCards.length - 2 ? 'border-b border-gray-200' : (idx === featureCards.length - 2 ? 'border-b lg:border-b-0 border-gray-200' : '')}">
           <div>
@@ -340,7 +343,7 @@ function populateDynamicElements() {
           <div class="w-full mt-2 p-2 sm:p-2.5 rounded-xl bg-gray-50/80 border border-gray-200/70 shadow-inner">
             <div class="w-full rounded-lg overflow-hidden border border-gray-200 bg-white shadow-xs">
               <div class="h-48 sm:h-56 md:h-60 w-full overflow-hidden bg-gray-100">
-                <img src="${card.imageSrc}" alt="${card.title} Screenshot" class="w-full h-full object-cover object-top" loading="lazy" />
+                <img src="${card.imageSrc}" alt="${card.title} Screenshot" class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" loading="lazy" />
               </div>
             </div>
           </div>
@@ -350,11 +353,12 @@ function populateDynamicElements() {
   }
 
   // 4. Stats Grid
+  const statAnimations = ['fade-up', 'zoom-in', 'flip-up', 'slide-up'];
   const statsGrid = document.getElementById('stats-grid');
   if (statsGrid) {
     statsGrid.innerHTML = statsData
-      .map(stat => `
-        <div class="flex flex-col items-center justify-center p-6 sm:p-8 text-center">
+      .map((stat, idx) => `
+        <div data-aos="${statAnimations[idx % statAnimations.length]}" data-aos-delay="${idx * 100}" data-aos-duration="600" class="flex flex-col items-center justify-center p-6 sm:p-8 text-center">
           <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
             ${stat.value}
           </span>
@@ -370,16 +374,17 @@ function populateDynamicElements() {
   }
 
   // 5. Pricing CTA Modules Grid
+  const moduleAnimations = ['zoom-in', 'fade-up', 'flip-up', 'zoom-in-up', 'slide-up', 'flip-down', 'fade-down', 'zoom-in'];
   const ctaModulesGrid = document.getElementById('cta-modules-grid');
   if (ctaModulesGrid) {
     ctaModulesGrid.innerHTML = ctaModules
-      .map(m => `
-        <div class="flex items-center gap-2.5 px-3.5 py-2.5 bg-white border border-gray-200/90 rounded-xl shadow-xs hover:border-gray-300 transition-all text-left">
-          <div class="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100">
+      .map((m, idx) => `
+        <div data-aos="${moduleAnimations[idx % moduleAnimations.length]}" data-aos-delay="${(idx % 4) * 60}" data-aos-duration="500" class="flex items-center gap-2.5 px-3.5 py-2.5 bg-white border border-gray-200/90 rounded-xl shadow-xs hover:border-primary/40 hover:shadow-sm transition-all text-left group">
+          <div class="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover:bg-primary/10 transition-colors">
             ${m.icon}
           </div>
           <div>
-            <div class="text-xs font-semibold text-gray-900 leading-tight">${m.name}</div>
+            <div class="text-xs font-semibold text-gray-900 leading-tight group-hover:text-primary transition-colors">${m.name}</div>
             <div class="text-[11px] text-gray-500 font-medium">${m.category}</div>
           </div>
         </div>
@@ -388,14 +393,15 @@ function populateDynamicElements() {
   }
 
   // 6. Testimonials Columns
+  const testimonialColAnimations = ['fade-up', 'zoom-in-up', 'slide-up'];
   const testimonialsGrid = document.getElementById('testimonials-grid');
   if (testimonialsGrid) {
     testimonialsGrid.innerHTML = testimonials
-      .map(col => `
-        <div class="flex flex-col gap-6">
+      .map((col, colIdx) => `
+        <div data-aos="${testimonialColAnimations[colIdx % testimonialColAnimations.length]}" data-aos-delay="${colIdx * 120}" data-aos-duration="700" class="flex flex-col gap-6">
           ${col
-            .map(item => `
-              <div class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-200/90 shadow-xs hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col justify-between">
+            .map((item, itemIdx) => `
+              <div data-aos="${itemIdx % 2 === 0 ? 'fade-up' : 'flip-up'}" data-aos-delay="${(colIdx * 100) + (itemIdx * 120)}" data-aos-duration="650" class="bg-white rounded-2xl p-6 sm:p-7 border border-gray-200/90 shadow-xs hover:shadow-md hover:border-primary/30 transition-all duration-300 flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between text-xs font-semibold text-gray-400 mb-4">
                     <span>${item.school}</span>
@@ -421,11 +427,12 @@ function populateDynamicElements() {
   }
 
   // 7. FAQ Accordion Items
+  const faqItemAnimations = ['fade-up', 'slide-up', 'zoom-in-up'];
   const faqList = document.getElementById('faq-accordion-list');
   if (faqList) {
     faqList.innerHTML = faqData
       .map((item, index) => `
-        <div class="faq-item border-b border-gray-200/90 py-4 sm:py-5 transition-colors">
+        <div data-aos="${faqItemAnimations[index % faqItemAnimations.length]}" data-aos-delay="${index * 40}" data-aos-duration="500" class="faq-item border-b border-gray-200/90 py-4 sm:py-5 transition-colors">
           <button 
             type="button" 
             class="faq-toggle w-full text-left flex items-center justify-between gap-4 cursor-pointer select-none group focus:outline-none"
@@ -772,6 +779,25 @@ function initApp() {
     footerContainer.innerHTML = renderFooter();
     initFooter();
   }
+
+  // Initialize AOS (Animate On Scroll)
+  AOS.init({
+    duration: 700,
+    easing: 'ease-out-cubic',
+    once: false,
+    mirror: true,
+    offset: 40,
+    delay: 0
+  });
+
+  // Ensure hero and initial viewport animate immediately on load
+  setTimeout(() => {
+    AOS.refreshHard();
+  }, 30);
+  
+  window.addEventListener('load', () => {
+    AOS.refreshHard();
+  });
 }
 
 if (document.readyState === 'loading') {

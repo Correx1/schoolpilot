@@ -45,7 +45,7 @@ export function renderNavbar(activePage = 'home') {
 
           <!-- Right Action: Sign In Button with Icon -->
           <div class="hidden md:flex items-center">
-            <a href="https://use.schoolpilot.online/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-md gap-2.5 font-semibold text-base shadow-md group">
+            <a href="https://my.schoolpilot.online" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-md gap-2.5 font-semibold text-base shadow-md group">
               <span>Sign In</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in transition-transform group-hover:translate-x-1"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
             </a>
@@ -99,7 +99,7 @@ export function renderNavbar(activePage = 'home') {
           </span>
         </a>
         <div class="pt-3">
-          <a href="https://use.schoolpilot.online/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-md w-full justify-center text-base py-2.5">
+          <a href="https://my.schoolpilot.online" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-md w-full justify-center text-base py-2.5">
             <span>Sign In</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in inline-block ml-2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
           </a>
