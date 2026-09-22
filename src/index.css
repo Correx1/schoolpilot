@@ -42,7 +42,7 @@ html, body {
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
   }
 
   .btn-sm {
@@ -58,26 +58,30 @@ html, body {
   }
 
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary-hover focus:ring-primary shadow-sm;
+    @apply bg-primary text-white hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/25 focus:ring-primary shadow-sm;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary-hover focus:ring-secondary shadow-sm;
+    @apply bg-secondary text-white hover:bg-secondary-hover hover:shadow-lg hover:shadow-secondary/25 focus:ring-secondary shadow-sm;
   }
 
   .btn-outline {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 focus:ring-primary;
   }
 
   .btn-outline-secondary {
-    @apply border-2 border-secondary text-secondary hover:bg-secondary hover:text-white focus:ring-secondary;
+    @apply border-2 border-secondary text-secondary hover:bg-secondary hover:text-white hover:shadow-lg hover:shadow-secondary/20 focus:ring-secondary;
   }
 
   .btn-ghost {
-    @apply text-primary hover:bg-primary/10 focus:ring-primary;
+    @apply text-primary hover:bg-primary/10 hover:shadow-sm focus:ring-primary;
   }
 
   .btn-white {
-    @apply bg-white text-primary hover:bg-gray-50 shadow-sm focus:ring-white;
+    @apply bg-white text-primary hover:bg-gray-50 hover:shadow-md focus:ring-white;
+  }
+
+  .feature-pill {
+    @apply inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs sm:text-[13px] font-mono font-medium tracking-wide bg-white border border-gray-200 text-gray-700 shadow-2xs select-none transition-opacity duration-300;
   }
 }

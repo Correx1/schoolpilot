@@ -287,12 +287,16 @@ function populateDynamicElements() {
   // 2. Feature Categories & Feature Pills Cloud
   const catBar = document.getElementById('feature-category-bar');
   if (catBar) {
+    const catAnimations = ['zoom-in', 'flip-up', 'fade-down', 'slide-up', 'zoom-in-up'];
     catBar.innerHTML = featureCategories
-      .map(cat => `
+      .map((cat, idx) => `
         <button 
           type="button" 
           data-cat-id="${cat.id}" 
-          class="cat-filter-btn flex items-center justify-center p-2.5 sm:p-3 rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200 cursor-pointer"
+          data-aos="${catAnimations[idx % catAnimations.length]}"
+          data-aos-delay="${idx * 70}"
+          data-aos-duration="500"
+          class="cat-filter-btn flex items-center justify-center p-2.5 sm:p-3 rounded-full text-gray-400 hover:text-white hover:bg-white/20 hover:scale-115 active:scale-95 transition-all duration-300 cursor-pointer shadow-xs hover:shadow-lg"
           title="${cat.name}"
         >
           ${cat.iconSvg}
@@ -303,11 +307,18 @@ function populateDynamicElements() {
 
   const pillsCloud = document.getElementById('feature-cloud');
   if (pillsCloud) {
+    const pillAosStyles = [
+      'zoom-in', 'fade-up', 'zoom-in-up', 'flip-up', 
+      'fade-down', 'zoom-in-down', 'slide-up', 'fade-up'
+    ];
     pillsCloud.innerHTML = allFeaturePills
-      .map(pill => `
+      .map((pill, idx) => `
         <span 
           data-category="${pill.category}" 
-          class="feature-pill inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs sm:text-[13px] font-mono font-medium tracking-wide bg-white border border-gray-200 text-gray-700 shadow-xs transition-all duration-300 select-none"
+          data-aos="${pillAosStyles[idx % pillAosStyles.length]}"
+          data-aos-delay="${idx * 35}"
+          data-aos-duration="550"
+          class="feature-pill inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs sm:text-[13px] font-mono font-medium tracking-wide bg-white border border-gray-200 text-gray-700 shadow-2xs select-none"
         >
           ${pill.name}
         </span>
@@ -504,14 +515,11 @@ function initFeaturesGrid() {
     pills.forEach((pill) => {
       const pillCat = pill.getAttribute('data-category');
       if (!activeCatId) {
-        pill.classList.remove('opacity-20', 'blur-[0.5px]', 'scale-95');
-        pill.classList.add('opacity-100');
+        pill.style.opacity = '1';
       } else if (pillCat === activeCatId) {
-        pill.classList.remove('opacity-20', 'blur-[0.5px]', 'scale-95');
-        pill.classList.add('opacity-100', 'bg-white', 'text-primary', 'shadow-md', 'border-primary/40', 'scale-[1.02]');
+        pill.style.opacity = '1';
       } else {
-        pill.classList.add('opacity-20', 'blur-[0.5px]', 'scale-95');
-        pill.classList.remove('opacity-100', 'text-primary', 'shadow-md', 'border-primary/40', 'scale-[1.02]');
+        pill.style.opacity = '0.15';
       }
     });
 
