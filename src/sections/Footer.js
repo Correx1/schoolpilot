@@ -3,7 +3,7 @@ import faviconImg from '../assets/schoolpilot favicon.png';
 
 export function renderFooter() {
   return `
-    <footer class="bg-white border-t border-gray-200 overflow-hidden relative">
+    <footer class="bg-[white] border-t border-gray-200 overflow-hidden relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-x border-gray-200/80 relative">
         
         <!-- Top Row: Brand & Contact Info -->
@@ -65,7 +65,7 @@ export function renderFooter() {
         <!-- Bottom Line -->
         <div class="py-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 relative z-20">
           <div>
-            &copy; ${new Date().getFullYear()} SchoolPilot Technologies. All rights reserved.
+            &copy; ${new Date().getFullYear()} Paragon Micro Data Ltd Technologies. All rights reserved.
           </div>
         </div>
 
